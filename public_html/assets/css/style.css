@@ -1,0 +1,326 @@
+/* Radio FM Cumilla - Custom Styles */
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c0392b;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e74c3c;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #c0392b;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* News Card Hover Effects */
+.news-card {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.news-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.news-card img {
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Breaking News Animation */
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.ticker-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 30s linear infinite;
+}
+
+/* Live Indicator Pulse */
+.live-indicator {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+/* Social Share Buttons */
+.social-share a {
+    transition: all 0.3s ease;
+}
+
+.social-share a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Widget Styling */
+.widget-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.widget-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #c0392b;
+}
+
+/* Sidebar Widgets */
+.sidebar-widget {
+    transition: all 0.3s ease;
+}
+
+.sidebar-widget:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Footer Links */
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+footer ul li a:hover {
+    transform: translateX(5px);
+}
+
+/* Responsive Images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Comment Section */
+.comments-list .card {
+    transition: all 0.3s ease;
+}
+
+.comments-list .card:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Form Styling */
+.form-control:focus {
+    border-color: #c0392b;
+    box-shadow: 0 0 0 0.2rem rgba(192, 57, 43, 0.25);
+}
+
+.btn-danger {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn-danger:hover {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+/* Badge Styling */
+.badge {
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+/* Table Responsive */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Audio Player Customization */
+audio::-webkit-media-controls-panel {
+    background-color: #f8f9fa;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #c0392b;
+    border-radius: 50%;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode .card-body {
+    color: #e0e0e0;
+}
+
+body.dark-mode .news-title a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .news-title a:hover {
+    color: #c0392b;
+}
+
+body.dark-mode .sidebar-widget {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .form-control {
+    background-color: #333;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode .table {
+    color: #e0e0e0;
+}
+
+body.dark-mode .table-hover tbody tr:hover {
+    color: #e0e0e0;
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    
+    .breaking-news-ticker {
+        font-size: 0.9rem;
+    }
+    
+    .radio-player h2 {
+        font-size: 1.5rem;
+    }
+    
+    .widget-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print,
+    header,
+    footer,
+    .sidebar,
+    .social-share,
+    .comments-section {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .content {
+        font-size: 12pt;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus Visible for Keyboard Navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #c0392b;
+    outline-offset: 2px;
+}
+
+/* Ad Placeholder */
+.ad-space {
+    background: linear-gradient(45deg, #f0f0f0 25%, #e0e0e0 25%, #e0e0e0 50%, #f0f0f0 50%, #f0f0f0 75%, #e0e0e0 75%, #e0e0e0 100%);
+    background-size: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-weight: 500;
+}
+
+/* RTL Support for Bangla */
+[dir="rtl"] {
+    text-align: right;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+    background: #000;
+    color: #fff;
+}
+
+.high-contrast a {
+    color: #ffff00;
+}
+
+.high-contrast .btn {
+    border: 2px solid #fff;
+}
